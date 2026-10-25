@@ -60,24 +60,18 @@ The system follows an extensible modular architecture:
 
 ---
 
-## 🏁 Getting Started
+🏁 Getting Started
 
-### 1. Prerequisites
+1. Prerequisites
 - **Node.js** (v18.x or later recommended)
 - **npm** / **yarn** / **pnpm**
 
-### 2. Clone the Repository
-```bash
-git clone https://github.com/YashrajKharat/VITPlacement.git
-cd VITPlacement
-```
-
-### 3. Install Dependencies
+ 2. Install Dependencies
 ```bash
 npm install
 ```
 
-### 4. Configure Environment Variables
+3. Configure Environment Variables
 Create a `.env` file in the root directory (refer to `.env.example`):
 ```bash
 cp .env.example .env
@@ -90,7 +84,7 @@ NEXTAUTH_SECRET="your-32-character-secret"
 
 > **Note**: If `MONGODB_URI` is not provided, the application automatically uses local mock data (`.mockdb.json`) for seamless offline demonstration.
 
-### 5. Run Development Server
+ 4. Run Development Server
 ```bash
 npm run dev
 ```
