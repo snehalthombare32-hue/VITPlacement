@@ -28,9 +28,9 @@ export async function getMentorByIdAction(id) {
 export async function bookMentorSessionAction(mentorId, bookingData) {
   try {
     const session = await auth();
-    const studentId = session?.user?.id || "student-1788620582804";
-    const studentName = session?.user?.name || "Yashraj Nana kharat";
-    const studentEmail = session?.user?.email || "yashraj200@gmail.com";
+    const studentId = session?.user?.id;
+    const studentName = session?.user?.name || "Student Candidate";
+    const studentEmail = session?.user?.email || "";
 
     const mentor = await db.mentors.getById(mentorId);
     if (!mentor) return { error: "Mentor not found" };

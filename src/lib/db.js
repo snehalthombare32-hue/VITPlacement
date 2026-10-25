@@ -1581,7 +1581,7 @@ export const db = {
       } else if (role === "RECRUITER") {
         mockDb.recruiters.push({
           id: `recruiter-profile-${Date.now()}`,
-          userId: id,
+          userId: mockId,
           name: name || "Recruiter",
           email,
           designation: "Recruiting Coordinator",
@@ -1591,7 +1591,7 @@ export const db = {
       }
 
       saveMockDbToFile();
-      return toPlain(newUser);
+      return toPlain(mockNewUser);
     }
   },
 

@@ -20,15 +20,15 @@ export default function ResumeBuilderPage() {
 
   // Comprehensive Resume Data Structure
   const [resumeData, setResumeData] = useState({
-    name: "Yashraj Nana Kharat",
-    headline: "Computer Engineering Undergraduate • Full Stack & Cloud Developer",
-    email: "yashraj.kharat@vit.edu.in",
-    phone: "+91 98207 91961",
+    name: "",
+    headline: "Engineering Undergraduate • Tech Enthusiast",
+    email: "",
+    phone: "",
     location: "Mumbai, Maharashtra, India",
-    linkedin: "https://linkedin.com/in/yashraj-kharat",
-    github: "https://github.com/yashrajkharat",
-    portfolio: "https://yashraj.dev",
-    summary: "Computer Engineering undergraduate at Vidyalankar Institute of Technology with proven hands-on experience in building high-concurrency web platforms, microservices, and distributed database systems using Next.js, Node.js, and PostgreSQL. Passionate about solving complex algorithmic problems and scalable system architecture.",
+    linkedin: "",
+    github: "",
+    portfolio: "",
+    summary: "Engineering undergraduate with a passion for modern software engineering, problem solving, and hands-on technical projects.",
     education: [
       {
         institution: "Vidyalankar Institute of Technology (VIT Wadala)",

@@ -41,6 +41,38 @@
       "passwordHash": "$2b$10$ZH.4xtIIa5r2f1r1.E8jSO2c7j6Yu3kJ9FkEbSc1sS5C1GMKb5zti",
       "role": "STUDENT",
       "name": "Student Candidate"
+    },
+    {
+      "id": "student-1792850851206",
+      "email": "snehalthombare32@gmail.com",
+      "passwordHash": "$2b$10$fk5CvbOiLdDNfEPBTkWIUucky5BXRKmqvqdrGprJZ/1uBoDJlzbxC",
+      "role": "STUDENT",
+      "name": "sachin",
+      "createdAt": "2026-10-24T14:07:31.206Z"
+    },
+    {
+      "id": "student-1792850911295",
+      "email": "snehalthombare31@gmail.com",
+      "passwordHash": "$2b$10$DMCrqxfcei8kq3R7NvIFNODEfPUMM6nV/IxfdTAyNWj4BN0IBTa9i",
+      "role": "STUDENT",
+      "name": "Snehal Thombare",
+      "createdAt": "2026-10-24T14:08:31.295Z"
+    },
+    {
+      "id": "student-1792851517596",
+      "email": "sachinthombare@gmail.com",
+      "passwordHash": "$2b$10$siKelChGfom8Q8PGZCfJ3O5Ls.iLqS.KNoeqErtmjPwgCCNbE6e0G",
+      "role": "STUDENT",
+      "name": "Snehal Thombare",
+      "createdAt": "2026-10-24T14:18:37.596Z"
+    },
+    {
+      "id": "student-1792852449215",
+      "email": "anishagaik@gmail.com",
+      "passwordHash": "$2b$10$Hd1p/cV6RnygEdCVl1AYYu7nuSsszwiji7bmhp/HdItjeyyfOIoBC",
+      "role": "STUDENT",
+      "name": "anisha Gaikwad",
+      "createdAt": "2026-10-24T14:34:09.215Z"
     }
   ],
   "students": [
@@ -160,6 +192,78 @@
       "atsScore": 0,
       "skillGapScore": 0,
       "createdAt": "2026-09-05T15:22:58.724Z"
+    },
+    {
+      "id": "student-profile-1792850851206",
+      "userId": "student-1792850851206",
+      "name": "sachin",
+      "email": "snehalthombare32@gmail.com",
+      "department": "CMPN",
+      "batch": "2026",
+      "cgpa": null,
+      "education": [],
+      "experience": [],
+      "projects": [],
+      "skills": [],
+      "achievements": [],
+      "certificates": [],
+      "placementReadinessScore": 0,
+      "atsScore": 0,
+      "skillGapScore": 0
+    },
+    {
+      "id": "student-profile-1792850911295",
+      "userId": "student-1792850911295",
+      "name": "Snehal Thombare",
+      "email": "snehalthombare31@gmail.com",
+      "department": "CMPN",
+      "batch": "2026",
+      "cgpa": null,
+      "education": [],
+      "experience": [],
+      "projects": [],
+      "skills": [],
+      "achievements": [],
+      "certificates": [],
+      "placementReadinessScore": 0,
+      "atsScore": 0,
+      "skillGapScore": 0
+    },
+    {
+      "id": "student-profile-1792851517596",
+      "userId": "student-1792851517596",
+      "name": "Snehal Thombare",
+      "email": "sachinthombare@gmail.com",
+      "department": "CMPN",
+      "batch": "2026",
+      "cgpa": null,
+      "education": [],
+      "experience": [],
+      "projects": [],
+      "skills": [],
+      "achievements": [],
+      "certificates": [],
+      "placementReadinessScore": 0,
+      "atsScore": 0,
+      "skillGapScore": 0
+    },
+    {
+      "id": "student-profile-1792852449215",
+      "userId": "student-1792852449215",
+      "name": "anisha Gaikwad",
+      "email": "anishagaik@gmail.com",
+      "department": "CMPN",
+      "batch": "2026",
+      "cgpa": null,
+      "education": [],
+      "experience": [],
+      "projects": [],
+      "skills": [],
+      "achievements": [],
+      "certificates": [],
+      "placementReadinessScore": 0,
+      "atsScore": 0,
+      "skillGapScore": 0
     }
   ],
   "recruiters": [],
@@ -2009,6 +2113,621 @@
     }
   ],
   "quizAttempts": [
+    {
+      "id": "att-1792856963419",
+      "certificateId": "VIT-CERT-774252",
+      "completedAt": "2026-10-24T15:49:23.419Z",
+      "quizId": "quiz-google-dsa",
+      "quizTitle": "Google DSA & Algorithmic Speed Sprint",
+      "category": "DSA & Problem Solving",
+      "studentId": "student-1792852449215",
+      "studentName": "anisha Gaikwad",
+      "correctCount": 3,
+      "totalQuestions": 5,
+      "accuracyPercent": 60,
+      "earnedPoints": 180,
+      "unstopCoinsEarned": 75,
+      "timeSpentSeconds": 7,
+      "questionReview": [
+        {
+          "questionId": "gq1",
+          "question": "What is the result of evaluating `(n & (n - 1)) == 0` for any positive integer `n > 0`?",
+          "options": [
+            "Checks if n is odd",
+            "Checks if n is a power of 2",
+            "Checks if n is prime",
+            "Checks if n is divisible by 4"
+          ],
+          "selected": 2,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "Subtracting 1 flips all bits after the lowest set bit. Bitwise ANDing `n & (n - 1)` clears the lowest set bit. If the result is 0, exactly one bit was set, meaning `n` is a power of 2."
+        },
+        {
+          "questionId": "gq2",
+          "question": "What is the amortized time complexity of inserting N elements into a dynamic array (like C++ `std::vector` or Java `ArrayList`) that doubles capacity upon filling?",
+          "options": [
+            "O(N^2)",
+            "O(N log N)",
+            "O(1) amortized per insert, O(N) total",
+            "O(N) per insert"
+          ],
+          "selected": 0,
+          "correctAnswer": 2,
+          "isCorrect": false,
+          "explanation": "Although resizing takes O(K) when triggered, geometric doubling distributes the copy cost across past insertions, resulting in O(1) amortized time per insertion."
+        },
+        {
+          "questionId": "gq3",
+          "question": "In Dijkstra's Shortest Path Algorithm with a Min-Heap (Binary Heap), what is the overall time complexity for a graph with V vertices and E edges?",
+          "options": [
+            "O(V + E)",
+            "O((V + E) log V)",
+            "O(V^2)",
+            "O(V * E)"
+          ],
+          "selected": 1,
+          "correctAnswer": 1,
+          "isCorrect": true,
+          "explanation": "Using a binary min-heap, extracting min takes O(V log V) and decreasing keys / pushing edges takes O(E log V), yielding O((V + E) log V)."
+        },
+        {
+          "questionId": "gq4",
+          "question": "Which algorithmic paradigm does the '0/1 Knapsack' problem solve using?",
+          "options": [
+            "Greedy Algorithm",
+            "Dynamic Programming",
+            "Divide & Conquer",
+            "Randomized Sampling"
+          ],
+          "selected": 1,
+          "correctAnswer": 1,
+          "isCorrect": true,
+          "explanation": "0/1 Knapsack exhibits overlapping subproblems and optimal substructure where items cannot be broken, requiring 2D/1D Dynamic Programming."
+        },
+        {
+          "questionId": "gq5",
+          "question": "What is the space complexity of a recursive Inorder traversal on a skewed binary tree with N nodes?",
+          "options": [
+            "O(1)",
+            "O(log N)",
+            "O(N)",
+            "O(N^2)"
+          ],
+          "selected": 2,
+          "correctAnswer": 2,
+          "isCorrect": true,
+          "explanation": "On a degenerated (skewed) tree, recursion depth reaches N, consuming O(N) call-stack memory."
+        }
+      ]
+    },
+    {
+      "id": "att-1792852463350",
+      "certificateId": "VIT-CERT-936391",
+      "completedAt": "2026-10-24T14:34:23.350Z",
+      "quizId": "quiz-quant-aptitude",
+      "quizTitle": "Quantitative Aptitude & Speed Math Master",
+      "category": "Aptitude & Reasoning",
+      "studentId": "student-1792852449215",
+      "studentName": "anisha Gaikwad",
+      "correctCount": 1,
+      "totalQuestions": 5,
+      "accuracyPercent": 20,
+      "earnedPoints": 40,
+      "unstopCoinsEarned": 10,
+      "timeSpentSeconds": 7,
+      "questionReview": [
+        {
+          "questionId": "aq1",
+          "question": "A can complete a project in 12 days and B can complete it in 24 days. Working together, how many days will they take to complete the project?",
+          "options": [
+            "6 days",
+            "8 days",
+            "10 days",
+            "16 days"
+          ],
+          "selected": 1,
+          "correctAnswer": 1,
+          "isCorrect": true,
+          "explanation": "Combined 1-day work = 1/12 + 1/24 = (2 + 1)/24 = 3/24 = 1/8. Hence, together they take 8 days."
+        },
+        {
+          "questionId": "aq2",
+          "question": "A train 180 meters long is traveling at 72 km/h. How long will it take to cross an electric pole?",
+          "options": [
+            "7 seconds",
+            "9 seconds",
+            "12 seconds",
+            "15 seconds"
+          ],
+          "selected": 2,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "Speed in m/s = 72 * (5/18) = 20 m/s. Time = Distance / Speed = 180 / 20 = 9 seconds."
+        },
+        {
+          "questionId": "aq3",
+          "question": "What is the probability of rolling a sum of 7 when two fair 6-sided dice are thrown simultaneously?",
+          "options": [
+            "1/6",
+            "1/12",
+            "5/36",
+            "7/36"
+          ],
+          "selected": 1,
+          "correctAnswer": 0,
+          "isCorrect": false,
+          "explanation": "Pairs yielding 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 outcomes out of 36 total. Probability = 6/36 = 1/6."
+        },
+        {
+          "questionId": "aq4",
+          "question": "If a product is sold at ₹960 with a 20% profit, what was its original cost price (CP)?",
+          "options": [
+            "₹768",
+            "₹800",
+            "₹820",
+            "₹840"
+          ],
+          "selected": 0,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "Selling Price = CP * 1.20 => 960 = CP * 1.20 => CP = 960 / 1.20 = ₹800."
+        },
+        {
+          "questionId": "aq5",
+          "question": "Find the missing number in the sequence: 2, 6, 12, 20, 30, ?",
+          "options": [
+            "40",
+            "42",
+            "44",
+            "48"
+          ],
+          "selected": 2,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "Differences are +4, +6, +8, +10. Next difference is +12 => 30 + 12 = 42 (or n^2 + n formula: 1*2, 2*3, 3*4, 4*5, 5*6, 6*7 = 42)."
+        }
+      ]
+    },
+    {
+      "id": "att-1792852389734",
+      "certificateId": "VIT-CERT-992593",
+      "completedAt": "2026-10-24T14:33:09.734Z",
+      "quizId": "quiz-quant-aptitude",
+      "quizTitle": "Quantitative Aptitude & Speed Math Master",
+      "category": "Aptitude & Reasoning",
+      "studentId": "student-1792851517596",
+      "studentName": "Snehal Thombare",
+      "correctCount": 3,
+      "totalQuestions": 5,
+      "accuracyPercent": 60,
+      "earnedPoints": 120,
+      "unstopCoinsEarned": 40,
+      "timeSpentSeconds": 9,
+      "questionReview": [
+        {
+          "questionId": "aq1",
+          "question": "A can complete a project in 12 days and B can complete it in 24 days. Working together, how many days will they take to complete the project?",
+          "options": [
+            "6 days",
+            "8 days",
+            "10 days",
+            "16 days"
+          ],
+          "selected": 1,
+          "correctAnswer": 1,
+          "isCorrect": true,
+          "explanation": "Combined 1-day work = 1/12 + 1/24 = (2 + 1)/24 = 3/24 = 1/8. Hence, together they take 8 days."
+        },
+        {
+          "questionId": "aq2",
+          "question": "A train 180 meters long is traveling at 72 km/h. How long will it take to cross an electric pole?",
+          "options": [
+            "7 seconds",
+            "9 seconds",
+            "12 seconds",
+            "15 seconds"
+          ],
+          "selected": 3,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "Speed in m/s = 72 * (5/18) = 20 m/s. Time = Distance / Speed = 180 / 20 = 9 seconds."
+        },
+        {
+          "questionId": "aq3",
+          "question": "What is the probability of rolling a sum of 7 when two fair 6-sided dice are thrown simultaneously?",
+          "options": [
+            "1/6",
+            "1/12",
+            "5/36",
+            "7/36"
+          ],
+          "selected": 0,
+          "correctAnswer": 0,
+          "isCorrect": true,
+          "explanation": "Pairs yielding 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 outcomes out of 36 total. Probability = 6/36 = 1/6."
+        },
+        {
+          "questionId": "aq4",
+          "question": "If a product is sold at ₹960 with a 20% profit, what was its original cost price (CP)?",
+          "options": [
+            "₹768",
+            "₹800",
+            "₹820",
+            "₹840"
+          ],
+          "selected": 1,
+          "correctAnswer": 1,
+          "isCorrect": true,
+          "explanation": "Selling Price = CP * 1.20 => 960 = CP * 1.20 => CP = 960 / 1.20 = ₹800."
+        },
+        {
+          "questionId": "aq5",
+          "question": "Find the missing number in the sequence: 2, 6, 12, 20, 30, ?",
+          "options": [
+            "40",
+            "42",
+            "44",
+            "48"
+          ],
+          "selected": 2,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "Differences are +4, +6, +8, +10. Next difference is +12 => 30 + 12 = 42 (or n^2 + n formula: 1*2, 2*3, 3*4, 4*5, 5*6, 6*7 = 42)."
+        }
+      ]
+    },
+    {
+      "id": "att-1792852220385",
+      "certificateId": "VIT-CERT-719595",
+      "completedAt": "2026-10-24T14:30:20.385Z",
+      "quizId": "quiz-quant-aptitude",
+      "quizTitle": "Quantitative Aptitude & Speed Math Master",
+      "category": "Aptitude & Reasoning",
+      "studentId": "student-1792851517596",
+      "studentName": "Snehal Thombare",
+      "correctCount": 2,
+      "totalQuestions": 5,
+      "accuracyPercent": 40,
+      "earnedPoints": 80,
+      "unstopCoinsEarned": 10,
+      "timeSpentSeconds": 43,
+      "questionReview": [
+        {
+          "questionId": "aq1",
+          "question": "A can complete a project in 12 days and B can complete it in 24 days. Working together, how many days will they take to complete the project?",
+          "options": [
+            "6 days",
+            "8 days",
+            "10 days",
+            "16 days"
+          ],
+          "selected": 3,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "Combined 1-day work = 1/12 + 1/24 = (2 + 1)/24 = 3/24 = 1/8. Hence, together they take 8 days."
+        },
+        {
+          "questionId": "aq2",
+          "question": "A train 180 meters long is traveling at 72 km/h. How long will it take to cross an electric pole?",
+          "options": [
+            "7 seconds",
+            "9 seconds",
+            "12 seconds",
+            "15 seconds"
+          ],
+          "selected": 2,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "Speed in m/s = 72 * (5/18) = 20 m/s. Time = Distance / Speed = 180 / 20 = 9 seconds."
+        },
+        {
+          "questionId": "aq3",
+          "question": "What is the probability of rolling a sum of 7 when two fair 6-sided dice are thrown simultaneously?",
+          "options": [
+            "1/6",
+            "1/12",
+            "5/36",
+            "7/36"
+          ],
+          "selected": 0,
+          "correctAnswer": 0,
+          "isCorrect": true,
+          "explanation": "Pairs yielding 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 outcomes out of 36 total. Probability = 6/36 = 1/6."
+        },
+        {
+          "questionId": "aq4",
+          "question": "If a product is sold at ₹960 with a 20% profit, what was its original cost price (CP)?",
+          "options": [
+            "₹768",
+            "₹800",
+            "₹820",
+            "₹840"
+          ],
+          "selected": 1,
+          "correctAnswer": 1,
+          "isCorrect": true,
+          "explanation": "Selling Price = CP * 1.20 => 960 = CP * 1.20 => CP = 960 / 1.20 = ₹800."
+        },
+        {
+          "questionId": "aq5",
+          "question": "Find the missing number in the sequence: 2, 6, 12, 20, 30, ?",
+          "options": [
+            "40",
+            "42",
+            "44",
+            "48"
+          ],
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "Differences are +4, +6, +8, +10. Next difference is +12 => 30 + 12 = 42 (or n^2 + n formula: 1*2, 2*3, 3*4, 4*5, 5*6, 6*7 = 42)."
+        }
+      ]
+    },
+    {
+      "id": "att-1792851587613",
+      "certificateId": "VIT-CERT-830114",
+      "completedAt": "2026-10-24T14:19:47.613Z",
+      "quizId": "quiz-tcs-nqt",
+      "quizTitle": "TCS NQT Advanced Technical Sprint",
+      "category": "Placement Technical",
+      "studentId": "student-1792851517596",
+      "studentName": "Snehal Thombare",
+      "correctCount": 1,
+      "totalQuestions": 5,
+      "accuracyPercent": 20,
+      "earnedPoints": 50,
+      "unstopCoinsEarned": 10,
+      "timeSpentSeconds": 11,
+      "questionReview": [
+        {
+          "questionId": "q1",
+          "question": "What is the worst-case time complexity of searching an element in a Balanced Binary Search Tree (AVL / Red-Black Tree) containing N nodes?",
+          "options": [
+            "O(1)",
+            "O(log N)",
+            "O(N)",
+            "O(N log N)"
+          ],
+          "selected": 1,
+          "correctAnswer": 1,
+          "isCorrect": true,
+          "explanation": "In a balanced BST, tree height is strictly bounded by O(log N). Hence lookup, insertion, and deletion all run in O(log N) worst-case time."
+        },
+        {
+          "questionId": "q2",
+          "question": "In Python, what is the output of: `print(type(lambda x: x + 1))`?",
+          "options": [
+            "<class 'lambda'>",
+            "<class 'function'>",
+            "<class 'expression'>",
+            "<class 'builtin_function'>"
+          ],
+          "selected": 0,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "Lambda expressions in Python construct instances of the standard `<class 'function'>` type."
+        },
+        {
+          "questionId": "q3",
+          "question": "Which database isolation level prevents 'Dirty Reads', 'Non-Repeatable Reads', and 'Phantom Reads' simultaneously?",
+          "options": [
+            "Read Committed",
+            "Read Uncommitted",
+            "Repeatable Read",
+            "Serializable"
+          ],
+          "selected": 0,
+          "correctAnswer": 3,
+          "isCorrect": false,
+          "explanation": "SERIALIZABLE is the highest ANSI SQL isolation level. It guarantees completely serializable execution, eliminating phantom reads, dirty reads, and non-repeatable reads."
+        },
+        {
+          "questionId": "q4",
+          "question": "What will `[1, 2, 3] + [4, 5]` produce in JavaScript?",
+          "options": [
+            "[1, 2, 3, 4, 5]",
+            "'1,2,34,5'",
+            "NaN",
+            "TypeError"
+          ],
+          "selected": 3,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "In JavaScript, the `+` operator coerces both arrays to strings ('1,2,3' and '4,5') and concatenates them to produce the string '1,2,34,5'."
+        },
+        {
+          "questionId": "q5",
+          "question": "Which data structure is primarily used to implement Breadth-First Search (BFS) graph traversal?",
+          "options": [
+            "Stack",
+            "Queue (FIFO)",
+            "Priority Queue",
+            "Disjoint Set"
+          ],
+          "selected": 0,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "BFS explores vertices layer by layer in First-In-First-Out order using a standard FIFO Queue."
+        }
+      ]
+    },
+    {
+      "id": "att-1792851538378",
+      "certificateId": "VIT-CERT-976005",
+      "completedAt": "2026-10-24T14:18:58.378Z",
+      "quizId": "quiz-tcs-nqt",
+      "quizTitle": "TCS NQT Advanced Technical Sprint",
+      "category": "Placement Technical",
+      "studentId": "student-1792851517596",
+      "studentName": "Snehal Thombare",
+      "correctCount": 3,
+      "totalQuestions": 5,
+      "accuracyPercent": 60,
+      "earnedPoints": 150,
+      "unstopCoinsEarned": 50,
+      "timeSpentSeconds": 9,
+      "questionReview": [
+        {
+          "questionId": "q1",
+          "question": "What is the worst-case time complexity of searching an element in a Balanced Binary Search Tree (AVL / Red-Black Tree) containing N nodes?",
+          "options": [
+            "O(1)",
+            "O(log N)",
+            "O(N)",
+            "O(N log N)"
+          ],
+          "selected": 1,
+          "correctAnswer": 1,
+          "isCorrect": true,
+          "explanation": "In a balanced BST, tree height is strictly bounded by O(log N). Hence lookup, insertion, and deletion all run in O(log N) worst-case time."
+        },
+        {
+          "questionId": "q2",
+          "question": "In Python, what is the output of: `print(type(lambda x: x + 1))`?",
+          "options": [
+            "<class 'lambda'>",
+            "<class 'function'>",
+            "<class 'expression'>",
+            "<class 'builtin_function'>"
+          ],
+          "selected": 0,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "Lambda expressions in Python construct instances of the standard `<class 'function'>` type."
+        },
+        {
+          "questionId": "q3",
+          "question": "Which database isolation level prevents 'Dirty Reads', 'Non-Repeatable Reads', and 'Phantom Reads' simultaneously?",
+          "options": [
+            "Read Committed",
+            "Read Uncommitted",
+            "Repeatable Read",
+            "Serializable"
+          ],
+          "selected": 3,
+          "correctAnswer": 3,
+          "isCorrect": true,
+          "explanation": "SERIALIZABLE is the highest ANSI SQL isolation level. It guarantees completely serializable execution, eliminating phantom reads, dirty reads, and non-repeatable reads."
+        },
+        {
+          "questionId": "q4",
+          "question": "What will `[1, 2, 3] + [4, 5]` produce in JavaScript?",
+          "options": [
+            "[1, 2, 3, 4, 5]",
+            "'1,2,34,5'",
+            "NaN",
+            "TypeError"
+          ],
+          "selected": 1,
+          "correctAnswer": 1,
+          "isCorrect": true,
+          "explanation": "In JavaScript, the `+` operator coerces both arrays to strings ('1,2,3' and '4,5') and concatenates them to produce the string '1,2,34,5'."
+        },
+        {
+          "questionId": "q5",
+          "question": "Which data structure is primarily used to implement Breadth-First Search (BFS) graph traversal?",
+          "options": [
+            "Stack",
+            "Queue (FIFO)",
+            "Priority Queue",
+            "Disjoint Set"
+          ],
+          "selected": 0,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "BFS explores vertices layer by layer in First-In-First-Out order using a standard FIFO Queue."
+        }
+      ]
+    },
+    {
+      "id": "att-1792851376284",
+      "certificateId": "VIT-CERT-778673",
+      "completedAt": "2026-10-24T14:16:16.284Z",
+      "quizId": "quiz-google-dsa",
+      "quizTitle": "Google DSA & Algorithmic Speed Sprint",
+      "category": "DSA & Problem Solving",
+      "studentId": "student-1792850851206",
+      "studentName": "sachin",
+      "correctCount": 2,
+      "totalQuestions": 5,
+      "accuracyPercent": 40,
+      "earnedPoints": 120,
+      "unstopCoinsEarned": 10,
+      "timeSpentSeconds": 15,
+      "questionReview": [
+        {
+          "questionId": "gq1",
+          "question": "What is the result of evaluating `(n & (n - 1)) == 0` for any positive integer `n > 0`?",
+          "options": [
+            "Checks if n is odd",
+            "Checks if n is a power of 2",
+            "Checks if n is prime",
+            "Checks if n is divisible by 4"
+          ],
+          "selected": 1,
+          "correctAnswer": 1,
+          "isCorrect": true,
+          "explanation": "Subtracting 1 flips all bits after the lowest set bit. Bitwise ANDing `n & (n - 1)` clears the lowest set bit. If the result is 0, exactly one bit was set, meaning `n` is a power of 2."
+        },
+        {
+          "questionId": "gq2",
+          "question": "What is the amortized time complexity of inserting N elements into a dynamic array (like C++ `std::vector` or Java `ArrayList`) that doubles capacity upon filling?",
+          "options": [
+            "O(N^2)",
+            "O(N log N)",
+            "O(1) amortized per insert, O(N) total",
+            "O(N) per insert"
+          ],
+          "selected": 1,
+          "correctAnswer": 2,
+          "isCorrect": false,
+          "explanation": "Although resizing takes O(K) when triggered, geometric doubling distributes the copy cost across past insertions, resulting in O(1) amortized time per insertion."
+        },
+        {
+          "questionId": "gq3",
+          "question": "In Dijkstra's Shortest Path Algorithm with a Min-Heap (Binary Heap), what is the overall time complexity for a graph with V vertices and E edges?",
+          "options": [
+            "O(V + E)",
+            "O((V + E) log V)",
+            "O(V^2)",
+            "O(V * E)"
+          ],
+          "selected": 2,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "Using a binary min-heap, extracting min takes O(V log V) and decreasing keys / pushing edges takes O(E log V), yielding O((V + E) log V)."
+        },
+        {
+          "questionId": "gq4",
+          "question": "Which algorithmic paradigm does the '0/1 Knapsack' problem solve using?",
+          "options": [
+            "Greedy Algorithm",
+            "Dynamic Programming",
+            "Divide & Conquer",
+            "Randomized Sampling"
+          ],
+          "selected": 1,
+          "correctAnswer": 1,
+          "isCorrect": true,
+          "explanation": "0/1 Knapsack exhibits overlapping subproblems and optimal substructure where items cannot be broken, requiring 2D/1D Dynamic Programming."
+        },
+        {
+          "questionId": "gq5",
+          "question": "What is the space complexity of a recursive Inorder traversal on a skewed binary tree with N nodes?",
+          "options": [
+            "O(1)",
+            "O(log N)",
+            "O(N)",
+            "O(N^2)"
+          ],
+          "selected": 1,
+          "correctAnswer": 2,
+          "isCorrect": false,
+          "explanation": "On a degenerated (skewed) tree, recursion depth reaches N, consuming O(N) call-stack memory."
+        }
+      ]
+    },
     {
       "id": "att-1791655090130",
       "certificateId": "VIT-CERT-299026",

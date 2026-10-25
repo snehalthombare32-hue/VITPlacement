@@ -42,8 +42,17 @@ export async function getQuizByIdAction(id) {
 export async function submitQuizAttemptAction(quizId, answers, timeSpentSeconds = 0) {
   try {
     const session = await auth();
-    const studentId = session?.user?.id || "student-1788620582804";
-    const studentName = session?.user?.name || "Yashraj Nana kharat";
+    const studentId = session?.user?.id;
+    if (!studentId) {
+      return { error: "Please log in to submit your assessment." };
+    }
+
+    let studentName = session?.user?.name;
+    const studentProfile = await db.students.getByUserId(studentId);
+    if (studentProfile?.name) {
+      studentName = studentProfile.name;
+    }
+    if (!studentName) studentName = "Student Candidate";
 
     const quiz = await db.quizzes.getById(quizId);
     if (!quiz) return { error: "Quiz not found" };
@@ -88,6 +97,7 @@ export async function submitQuizAttemptAction(quizId, answers, timeSpentSeconds 
     return {
       success: true,
       attempt,
+      studentName,
       accuracyPercent,
       earnedPoints,
       unstopCoinsEarned,
@@ -104,10 +114,14 @@ export async function submitQuizAttemptAction(quizId, answers, timeSpentSeconds 
 export async function getStudentQuizCertificatesAction() {
   try {
     const session = await auth();
-    const studentId = session?.user?.id || "student-1788620582804";
+    const studentId = session?.user?.id;
+    if (!studentId) return { success: true, attempts: [], studentName: "" };
+
+    const studentProfile = await db.students.getByUserId(studentId);
+    const studentName = studentProfile?.name || session?.user?.name || "Student Candidate";
     const attempts = await db.quizAttempts.listByStudent(studentId);
 
-    return { success: true, attempts };
+    return { success: true, attempts: attempts || [], studentName };
   } catch (err) {
     return { error: "Failed to load quiz certificates." };
   }

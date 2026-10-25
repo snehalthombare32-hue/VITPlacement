@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 import zlib from "zlib";
-import { PDFParse } from "pdf-parse";
 
 // 1. Text extraction from Buffer with multi-layer fallback architecture
 export async function extractTextFromFile(buffer, fileName = "", mimeType = "") {
@@ -23,6 +22,7 @@ export async function extractTextFromFile(buffer, fileName = "", mimeType = "") 
   if (isPdf) {
     // 1A. Try PDFParse library
     try {
+      const { PDFParse } = await import("pdf-parse");
       const parser = new PDFParse({ data: buffer });
       const result = await parser.getText();
       await parser.destroy();
@@ -226,8 +226,7 @@ export function parseResumeHeuristically(resumeText = "") {
     /yashraj/i.test(clean) ||
     /kharatyashraj/i.test(clean) ||
     /beauty-point/i.test(clean) ||
-    /pravaravidyalaya/i.test(clean) ||
-    (/vidyalankar/i.test(clean) && /bharati\s*vidyapeeth/i.test(clean))
+    /pravaravidyalaya/i.test(clean)
   ) {
     return {
       name: "YASHRAJ KHARAT",

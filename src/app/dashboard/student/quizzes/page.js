@@ -24,6 +24,8 @@ export default function QuizzesAssessmentPage() {
   const [timeLeftSeconds, setTimeLeftSeconds] = useState(600);
   const [submittingQuiz, setSubmittingQuiz] = useState(false);
   const [quizResult, setQuizResult] = useState(null);
+  const [studentName, setStudentName] = useState("");
+  const [viewingCertificate, setViewingCertificate] = useState(null);
 
   const loadData = async () => {
     setLoading(true);
@@ -33,7 +35,10 @@ export default function QuizzesAssessmentPage() {
         getStudentQuizCertificatesAction()
       ]);
       if (qRes?.success) setQuizzes(qRes.quizzes || []);
-      if (cRes?.success) setCertificates(cRes.attempts || []);
+      if (cRes?.success) {
+        setCertificates(cRes.attempts || []);
+        if (cRes.studentName) setStudentName(cRes.studentName);
+      }
     } catch (err) {
       console.error(err);
     } finally {
@@ -91,9 +96,13 @@ export default function QuizzesAssessmentPage() {
       const res = await submitQuizAttemptAction(activeQuiz.id, userAnswers, durationTaken);
       if (res?.success) {
         setQuizResult(res);
+        if (res.studentName) setStudentName(res.studentName);
         // Refresh certificates list
         const certRes = await getStudentQuizCertificatesAction();
-        if (certRes?.success) setCertificates(certRes.attempts);
+        if (certRes?.success) {
+          setCertificates(certRes.attempts || []);
+          if (certRes.studentName) setStudentName(certRes.studentName);
+        }
       }
     } catch (err) {
       console.error(err);
@@ -188,7 +197,9 @@ export default function QuizzesAssessmentPage() {
                   </div>
                   <div className="space-y-1">
                     <p className="text-xs uppercase tracking-widest text-slate-300">This is to certify that</p>
-                    <h4 className="text-2xl font-serif font-bold text-amber-300">Yashraj Nana kharat</h4>
+                    <h4 className="text-2xl font-serif font-bold text-amber-300">
+                      {quizResult.studentName || quizResult.attempt?.studentName || studentName || "Student Candidate"}
+                    </h4>
                     <p className="text-xs text-blue-100">
                       has successfully passed the verified assessment for
                     </p>
@@ -476,13 +487,69 @@ export default function QuizzesAssessmentPage() {
                       </p>
                     </div>
                   </div>
-                  <span className="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full font-bold text-[10px]">
-                    VERIFIED
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => setViewingCertificate(cert)}
+                      className="px-3 py-1.5 bg-slate-900 hover:bg-black text-white rounded-xl font-bold text-[11px] flex items-center gap-1.5 cursor-pointer shadow-xs transition-all"
+                    >
+                      <Award className="h-3 w-3" />
+                      <span>View</span>
+                    </button>
+                    <span className="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full font-bold text-[10px]">
+                      VERIFIED
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
           )}
+        </div>
+      )}
+
+      {/* VIEW CERTIFICATE MODAL */}
+      {viewingCertificate && (
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 animate-in fade-in duration-150">
+          <div className="bg-white rounded-3xl max-w-xl w-full p-6 space-y-6 shadow-2xl relative text-center">
+            <div className="bg-gradient-to-br from-slate-900 via-[#1C4980] to-indigo-950 text-white p-6 md:p-8 rounded-3xl border-4 border-amber-400/80 shadow-xl text-center space-y-4 relative overflow-hidden">
+              <div className="flex items-center justify-between text-[11px] text-amber-300 font-mono">
+                <span>OFFICIAL SKILL CERTIFICATION</span>
+                <span>ID: {viewingCertificate.certificateId}</span>
+              </div>
+              <div className="space-y-1">
+                <p className="text-xs uppercase tracking-widest text-slate-300">This is to certify that</p>
+                <h4 className="text-2xl font-serif font-bold text-amber-300">
+                  {viewingCertificate.studentName || studentName || "Student Candidate"}
+                </h4>
+                <p className="text-xs text-blue-100">
+                  has successfully passed the verified assessment for
+                </p>
+                <p className="text-base font-bold text-white underline decoration-amber-400 underline-offset-4">
+                  {viewingCertificate.quizTitle}
+                </p>
+              </div>
+              <div className="flex items-center justify-between text-[10px] text-slate-300 pt-3 border-t border-white/20">
+                <span>Issued by: <strong>Vidyalankar Institute of Technology</strong></span>
+                <span>Accuracy: <strong>{viewingCertificate.accuracyPercent}%</strong></span>
+                <span>Date: <strong>{new Date(viewingCertificate.createdAt || Date.now()).toISOString().split("T")[0]}</strong></span>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center gap-3">
+              <button
+                onClick={handlePrintCertificate}
+                className="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-black text-white font-bold text-xs flex items-center gap-2 cursor-pointer shadow-md"
+              >
+                <Printer className="h-4 w-4" />
+                <span>Print / Save Certificate</span>
+              </button>
+              <button
+                onClick={() => setViewingCertificate(null)}
+                className="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs cursor-pointer"
+              >
+                Close
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>
